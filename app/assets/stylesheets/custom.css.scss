@@ -2,7 +2,7 @@
 @import "bootstrap";
 
 body {
-  background-color: #E7E6E3;
+  background-color: #f5f1f1;
 }
 
 /* header */
@@ -13,7 +13,7 @@ body {
 }
 
 .container > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-header, .container-fluid > .navbar-collapse {
-  margin-left: 200px;
+  margin-left: 80px;
   height: 80px;
 }
 
@@ -41,7 +41,7 @@ body {
   padding-top: 13px;
   padding: 10px 85px;
   .form-group {
-    margin-left: 100px;
+    margin-left: 10px;
   }
 }
 
@@ -54,7 +54,7 @@ body {
 }
 
 .navbar-right {
-  margin-right: 100px;
+  margin-right: 0px;
 }
 
 /* main section */
@@ -68,7 +68,7 @@ section.content.clearfix {
 footer.container {
   margin-top: 20px;
   border-top: 5px solid #F8B6B5;
-  padding: 5px;
+  padding: 0;
 }
 
 .container {
