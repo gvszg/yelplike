@@ -1,8 +1,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* genaral */
+
 body {
   background-color: #f5f1f1;
+}
+
+section.ui-index {
+  background: #f7f7f7;
+  padding: 30px;
 }
 
 /* header */
