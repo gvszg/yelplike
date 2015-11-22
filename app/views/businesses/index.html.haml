@@ -1,0 +1,8 @@
+%article.biz_category
+  %header
+    %h3= link_to "Coffee & Tea"
+  .videos.row    
+    - @businesses.each do |business|
+      .video.col-sm-2
+        = link_to "", nil do
+          %p= business.name
