@@ -1,23 +1,26 @@
 %nav.navbar.navbar-default
   .container-fluid
-    / Brand and toggle get grouped for better mobile display
     .navbar-header
-      %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
-        %span.sr-only Toggle navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a.navbar-brand{:href => "#"} YelpLike
+      .navbar-brand= link_to 'YelpLike', home_path
+      / %a.navbar-brand{:href => "#"} YelpLike
     / Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse      
       %ul.nav.navbar-nav
         %li= link_to "Businesses"
         %li= link_to "My Yelp"
         %li= link_to "Friends"
+      - if current_user
         %form.navbar-form.navbar-left{:role => "search"}
           .form-group
             %input.form-control{:placeholder => "Search", :type => "text"}
               %button.btn.btn-default{:type => "submit"} Search                    
-      %ul.nav.navbar-nav.navbar-right
-        %li.nav_item= link_to 'Sign Up', '#'
-        %li.nav_item= link_to 'Sign In', '#'
+        %ul.nav.navbar-nav.navbar-right
+          %li.dropdown
+            %a(href="#" id="dlabel" role="button" data-toggle="dropdown" class="dropdown-toggle" data-target="#")
+              Welcome, #{current_user.full_name}
+              %b.caret
+            %ul.dropdown-menu(role="menu" aria-labelledby="dlabel")
+              %li
+                %a(href="#") Account
+                %a(href="#") Plan and Billing
+                = link_to 'Sign Out', sign_out_path
