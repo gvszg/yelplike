@@ -15,9 +15,9 @@ describe UsersController do
         expect(User.count).to eq(1)
       end
 
-      it "redirect to home page" do
+      it "redirect to sign in page" do
         post :create, user: Fabricate.attributes_for(:user)
-        expect(response).to redirect_to home_path
+        expect(response).to redirect_to sign_in_path
       end
     end
 
