@@ -1,2 +1,5 @@
 module ApplicationHelper
+  def options_for_business_reviews(selected=nil)
+    options_for_select((1..5).to_a.map { |number| [pluralize(number, "Star"), number] }, selected)
+  end
 end

@@ -6,4 +6,5 @@ describe Business do
   it { should validate_presence_of(:region) }
   it { should validate_presence_of(:country) }
   it { should belong_to(:creator) }
+  it { should have_many(:reviews) }
 end
