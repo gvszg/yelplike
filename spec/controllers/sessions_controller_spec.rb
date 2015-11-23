@@ -25,7 +25,7 @@ describe SessionsController do
       it "sets the falsh warning message" do
         user = Fabricate(:user)
         post :create, email: user.email, password: user.password
-        expect(flash[:warning]).not_to be_blank
+        expect(flash[:success]).not_to be_blank
       end
     end
 
@@ -45,7 +45,7 @@ describe SessionsController do
       it "sets flash error message" do
         user = Fabricate(:user)
         post :create, email: user.email, password: '1234'
-        expect(flash[:danger]).not_to be_blank
+        expect(flash[:warning]).not_to be_blank
       end
     end
   end
