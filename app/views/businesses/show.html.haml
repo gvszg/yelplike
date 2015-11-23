@@ -1,0 +1,13 @@
+%article.biz
+  .container
+    .row
+      .biz-info
+        %header
+          %h1= @business.name
+          %h4 Rating: 4.5/5.0
+          = link_to @business.category do
+            %h4 #{@business.category.name}
+          %p Address: #{@business.address}
+          %p Region: #{@business.region}
+          %p Country: #{@business.country}
+          
