@@ -1,0 +1,31 @@
+%section.new_biz.container
+  .row
+    .col-sm-10.col-sm-offset-1
+      = form_for @business, html: { class: 'form-horizontal' } do |f|
+        %header
+          %h1 Add a new business 
+        %fieldset
+          .form-group
+            = f.label :name, 'Name', class: 'control-label col-sm-2'
+            .col-sm-6
+              = f.text_field :name, class: 'form-control'
+          .form-group
+            = f.label :address, 'Address', class: 'control-label col-sm-2'
+            .col-sm-6
+              = f.text_field :address, class: 'form-control'
+          .form-group
+            = f.label :region, 'Region', class: 'control-label col-sm-2'
+            .col-sm-6
+              = f.text_field :region, class: 'form-control'
+          .form-group
+            = f.label :country, 'Country', class: 'control-label col-sm-2'
+            .col-sm-6
+              = f.text_field :country, class: 'form-control'
+          .form-group
+            = f.label :category_id, 'Category', class: 'control-label col-sm-2'
+            .row
+              .col-sm-3
+                = f.select :category_id, Category.all.map { |c| [c.name, c.id] }, { include_blank: true }, class: 'form-control'                   
+        %fieldset.actions.control-group.col-sm-offset-2
+          .controls
+            = f.submit 'Create Business', class: 'btn btn-default'

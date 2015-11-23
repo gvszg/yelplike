@@ -21,7 +21,7 @@ section.site_title h1, section.site_title p, section.site_title a {
   margin-top: -50px;
 }
 
-section.register.container, section.sign_in, {
+section.register.container, section.sign_in, section.new_biz.container {
   form {
     background: #f7f7f7;
     padding: 30px;
@@ -34,3 +34,4 @@ section.register.container, section.sign_in, {
     }
   }
 }
+
