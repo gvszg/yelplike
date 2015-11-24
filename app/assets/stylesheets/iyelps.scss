@@ -1,0 +1,35 @@
+section.content.clearfix {
+  margin: 0 200px;
+}
+
+article.iyelps {
+  background-color: #F7F7F7;
+  border: 1px solid #ccccc8;
+  padding: 30px;
+  margin: 0 0 30px;
+
+  section.iyelps.container {
+    .row {
+      margin-left: -50px;
+      margin-bottom: 20px;
+    }
+
+    iyelps {
+      margin-left: 0;
+
+      h1 {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  table {
+    thead {
+      font-size: large;
+    }
+
+    tbody {
+      font-size: medium;
+    }
+  }
+}
