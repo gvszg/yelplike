@@ -38,4 +38,49 @@ describe UsersController do
       end
     end
   end
+
+  describe "GET show" do
+    context "with authenticated users" do
+      let(:joe) { Fabricate(:user) }
+      before do 
+        session[:user_id] = joe.id
+        get :show, id: joe.id
+      end
+
+      it "sets @user" do        
+        expect(assigns(:user)).to eq(joe)
+      end
+
+      it "sets @review" do
+        review1 = Fabricate(:review, creator: joe)
+        review2 = Fabricate(:review, creator: joe)
+        expect(assigns(:reviews)).to match_array([review1, review2])
+      end
+    end
+
+    context "with unauthenticated users" do
+      let(:joe) { Fabricate(:user) }
+
+      it "redirects to the sign in page" do        
+        get :show, id: joe.id
+        expect(response).to redirect_to sign_in_path
+      end
+    end
+  end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

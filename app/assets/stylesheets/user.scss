@@ -4,6 +4,7 @@ section.user {
     background-color: #F7F7F7;
     padding: 20px;
     header {
+      pading-left: 20px;
       margin-bottom: 30px;
       img {
         float: left;
@@ -21,9 +22,9 @@ section.user {
 }
 
 section.user_reviews {
-  
   ul {
     list-style: none;
+    padding-left: 0px;
     article.review {
       margin-top: 20px;
       border-top: 1px solid #ccc;
