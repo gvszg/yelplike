@@ -1,20 +1,14 @@
 %nav.navbar.navbar-default
   .container-fluid
     .navbar-header
-      .navbar-brand= link_to 'YelpLike', home_path
-      / %a.navbar-brand{:href => "#"} YelpLike
-    / Collect the nav links, forms, and other content for toggling
+      .navbar-brand= link_to 'YelpLike'
     #bs-example-navbar-collapse-1.collapse.navbar-collapse      
-      %ul.nav.navbar-nav
-        %li= link_to "Businesses"
+      %ul.nav.navbar-nav                            
+      %ul.nav.navbar-nav.navbar-right
+        %li= link_to "Businesses", home_path
+        %li= link_to "Reviews"
         %li= link_to "My Yelp"
-        %li= link_to "Friends"
-      - if current_user
-        %form.navbar-form.navbar-left{:role => "search"}
-          .form-group
-            %input.form-control{:placeholder => "Search", :type => "text"}
-              %button.btn.btn-default{:type => "submit"} Search                    
-        %ul.nav.navbar-nav.navbar-right
+        - if current_user
           %li.dropdown
             %a(href="#" id="dlabel" role="button" data-toggle="dropdown" class="dropdown-toggle" data-target="#")
               Welcome, #{current_user.full_name}

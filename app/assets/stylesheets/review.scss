@@ -1,0 +1,38 @@
+section.content.clearfix {
+  margin: 0 200px;
+}
+
+article.reviews {
+  background-color: #F7F7F7;
+  border: 1px solid #ccccc8;
+  padding: 30px;
+  margin: 0 0 30px;
+  
+  section.reviews.container {
+    .row {
+      margin-left: -50px;
+      margin-bottom: 20px;
+    }
+
+    reviews {
+      margin-left: 0;
+    }
+  }
+  
+  ul {
+    list-style: none;
+    margin-top: 30px;
+
+    li {
+      border-top: 1px solid;
+
+      h5 {
+        font-size: large;        
+      }
+
+      p {
+        font-size: large;
+      }
+    }  
+  }
+}
