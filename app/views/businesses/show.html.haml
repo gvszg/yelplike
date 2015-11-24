@@ -1,43 +1,42 @@
-%article.biz
-  .container
+%section.content.clearfix
+  %article.biz
+    %section.container
+      .row
+        .biz-info
+          %header
+            %h1= @business.name
+            %h4 Rating: 4.5/5.0
+            = link_to @business.category do
+              %h4 #{@business.category.name}
+            %p Address: #{@business.address}
+            %p Region: #{@business.region}
+            %p Country: #{@business.country}        
+  %section.reviews.container
     .row
-      .biz-info
+      .col-sm-10.col-sm-offset-1
+        = form_for [@business, Review.new] do |f|
+          %fieldset
+            .form-group
+              = f.label :rating, 'Rate this business'
+              .row
+                .col-sm-3
+                  = f.select :rating, options_for_business_reviews, {}, class: 'form-control'
+            .form-group
+              = f.label :content, 'Write Review'
+              .row
+                .col-sm-8
+                  = f.text_area :content, rows: 6, class: 'form-control'
+          %fieldset.form-group.actions.clearfix
+            %input(type="submit" value="Submit" class="btn")
+            = link_to 'Cancel', @business
         %header
-          %h1= @business.name
-          %h4 Rating: 4.5/5.0
-          = link_to @business.category do
-            %h4 #{@business.category.name}
-          %p Address: #{@business.address}
-          %p Region: #{@business.region}
-          %p Country: #{@business.country}
-          
-%hr
-%section.reviews.container
-  .row
-    .col-sm-10.col-sm-offset-1
-      = form_for [@business, Review.new] do |f|
-        %fieldset
-          .form-group
-            = f.label :rating, 'Rate this business'
-            .row
-              .col-sm-3
-                = f.select :rating, options_for_business_reviews, {}, class: 'form-control'
-          .form-group
-            = f.label :content, 'Write Review'
-            .row
-              .col-sm-8
-                = f.text_area :content, rows: 6, class: 'form-control'
-        %fieldset.form-group.actions.clearfix
-          %input(type="submit" value="Submit" class="btn")
-          = link_to 'Cancel', @business
-      %header
-        %h3 Recommended Reviews (#{@reviews.count})
-      %ul
-        - @reviews.each do |review|
-          %article.review
-            %li.row
-              .col-sm-2
-                %span Rating: #{review.rating} / 5
-                %p by #{link_to review.creator.full_name, review.creator}
-              .col-sm-8
-                %p= review.content
+          %h3 Recommended Reviews (#{@reviews.count})        
+        %ul     
+          %article.review     
+            - @reviews.each do |review|            
+              %li.row
+                .col-sm-3
+                  %span Rating: #{review.rating} / 5
+                  %p by #{link_to review.creator.full_name, review.creator}
+                .col-sm-8
+                  %p= review.content

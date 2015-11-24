@@ -9,5 +9,5 @@
             %li.row        
               .col-sm-9
                 %h5 #{ link_to review.business.name, review.business }  reviewed by #{ link_to review.creator.full_name, review.creator }
-                %h5 Rating: #{review.rating} / 5 at #{ review.created_at.to_s(:long) }
+                %p Rating: #{review.rating} / 5 at #{ review.created_at.to_s(:long) }
                 %p= review.content

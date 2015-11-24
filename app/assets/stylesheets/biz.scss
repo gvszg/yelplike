@@ -1,21 +1,30 @@
+section.content.clearfix {
+  margin: 0 250px;
+}
+
 article.biz {
   background-color: #F7F7F7;
   border: 1px solid #ccccc8;
   padding: 30px;
   margin: 0 0 30px;
-  .biz_info {
-    margin-left: 30px;
-    header {
-      padding-bottom: 8px;
-      margin-bottom: 12px;
-      border-bottom: 1px solid #DDD;
-      h3 {
-        font-weight: bold;
-        font-size: 20px;
+  
+  .row {
+    .biz_info {
+      margin-left: 30px;
+      header {
+        padding-bottom: 8px;
+        margin-bottom: 12px;
+        border-bottom: 1px solid #DDD;
+        h4 {
+          font-weight: bold;
+          font-size: 20px;
+        }
       }
     }
+
     p {
       margin-bottom: 20px;
+      font-size: medium;
     }
     .actions {
       a {
@@ -23,25 +32,33 @@ article.biz {
       }  
     }
   }
-  .biz_large_cover {
-    
-  }
 }
 
 section.reviews {
-  form {
+  .form-group {
     margin-bottom: 30px;
+
+    label {
+      font-size: medium;
+    }
   }
+
   ul {
     list-style: none;
+    padding-left: 0px;
+
     article.review {
       margin-top: 20px;
       border-top: 1px solid #ccc;
       padding-top: 20px;
       li {
+        p {
+          font-size: medium;
+        }
+
         span {
           font-weight: bold;
-          font-size: 14px;
+          font-size: 20px;
         }
         &:last-of-type {
           border-bottom: none;
