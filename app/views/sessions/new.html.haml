@@ -8,12 +8,16 @@
           .form-group
             = label_tag :email, 'Email Address'
             .row
-              .col-sm-4
+              .col-sm-9
                 = text_field_tag :email, nil, class: 'form-control'
           .form-group
             = label_tag :password, 'Password'
             .row
-              .col-sm-4
+              .col-sm-9
                 = password_field_tag :password, nil, class: 'form-control'
         %fieldset.form-group.action
           %input(type="submit" value="Sign in" class="btn btn-default")
+    .col-sm-3
+      %p No Account Yet? It's Ok!
+      = link_to register_path, class: 'btn btn-primary btn-lg' do
+        Create Your Account
