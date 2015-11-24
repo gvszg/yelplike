@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
   before_action :require_user
 
   def index
-    
+    @reviews = Review.all.recent
   end
   
   def create

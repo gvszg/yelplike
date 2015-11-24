@@ -1,8 +1,13 @@
-%article.biz_category
-  %header
-    %h3= link_to "Coffee & Tea"
-  .videos.row
-    - 6.times do
-      .video.col-sm-2
-        = link_to "", nil do
-          %p Kohimomento
+%article.reviews
+  %section.reviews.container
+    .row
+      %reviews.col-sm-9.col-sm-offset-1
+        %header
+          %h1 Recent Reviews
+        %ul
+          - @reviews.each do |review|                  
+            %li.row        
+              .col-sm-9
+                %h5 #{ link_to review.business.name, review.business }  reviewed by #{ link_to review.creator.full_name, review.creator }
+                %h5 Rating: #{review.rating} / 5 at #{ review.created_at.to_s(:long) }
+                %p= review.content
