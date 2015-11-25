@@ -35,3 +35,46 @@ section.register.container, section.sign_in, section.new_biz.container {
   }
 }
 
+/* register */
+section.register.container {
+  p.sign_in {
+    margin-top: 40px;
+    margin-left: 100px;
+    font-size: medium;
+  }
+}
+
+/* session */
+section.sign_in.container {
+  .row {
+    background: #f7f7f7;
+
+    .col-sm-10 {
+      width: 600px;
+
+      form {
+        border: 0;
+      }
+    }
+
+    .col-sm-3 {
+      margin-top: 60px;
+
+      p {
+        font-size: medium;
+      }  
+    } 
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
