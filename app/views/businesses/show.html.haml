@@ -1,6 +1,6 @@
 %section.content.clearfix
   %article.biz
-    %section.container
+    %section.biz.container
       .row
         .biz-info
           %header
@@ -17,12 +17,24 @@
         = form_for [@business, Review.new] do |f|
           %fieldset
             .form-group
-              = f.label :rating, 'Rate this business'
+              = f.label 'Rate this business'
               .row
-                .col-sm-3
-                  = f.select :rating, options_for_business_reviews, {}, class: 'form-control'
+                .col-sm-5
+                  
+                  = f.radio_button :rating, 1
+                  = f.label :rating, '1', :value => 1
+                  = f.radio_button :rating, 2
+                  = f.label :rating, '2', :value => 2
+                  = f.radio_button :rating, 3
+                  = f.label :rating, '3', :value => 3
+                  = f.radio_button :rating, 4
+                  = f.label :rating, '4', :value => 4
+                  = f.radio_button :rating, 5
+                  = f.label :rating, '5', :value => 5
+
+                  / = f.select :rating, options_for_business_reviews, {}, class: 'form-control'
             .form-group
-              = f.label :content, 'Write Review'
+              = f.label :content, 'Write Your Review'
               .row
                 .col-sm-8
                   = f.text_area :content, rows: 6, class: 'form-control'
@@ -38,5 +50,5 @@
                 .col-sm-3
                   %span Rating: #{review.rating} / 5
                   %p by #{link_to review.creator.full_name, review.creator}
-                .col-sm-8
+                .col-sm-7
                   %p= review.content

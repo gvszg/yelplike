@@ -6,17 +6,24 @@ article.biz_category {
   
   header {
     margin-bottom: 20px;
-    h2 {      
+    h1 {      
       a {
         color: black;
       }
     }
+
+    h2 {
+      a {
+        color: black;
+      }
+    } 
   }
 
   .biz.row {
     .biz {
       a {
         text-decoration: none;
+        font-size: medium;
       }
     }
   }

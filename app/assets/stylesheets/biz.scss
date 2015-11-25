@@ -1,5 +1,8 @@
 section.content.clearfix {
   margin: 0 250px;
+    section.content.clearfix {
+      border-bottom-width: 0px;
+    }
 }
 
 article.biz {
@@ -41,6 +44,24 @@ section.reviews {
     label {
       font-size: medium;
     }
+
+    .row {
+      .col-sm-5 {
+        label {
+          margin-left: 5px;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+          margin: 4px 0 0 30px;
+        }
+      }
+
+      .col-sm-8 {
+        textarea.form-control {
+          font-size: 20px;
+        }
+      }
+    }
   }
 
   ul {
@@ -52,6 +73,9 @@ section.reviews {
       border-top: 1px solid #ccc;
       padding-top: 20px;
       li {
+        width: 945px;
+        margin-bottom: 20px;
+        
         p {
           font-size: medium;
         }
