@@ -1,12 +1,29 @@
 article.biz_category {
-  margin-bottom: 20px;
-  padding: 20px 10px;
+  background-color: #F7F7F7;
+  border: 1px solid #ccccc8;
+  margin-bottom: 30px;
+  padding: 30px;
+  
   header {
     margin-bottom: 20px;
-    h3 {
-      font-size: 18px;
+    h1 {      
       a {
         color: black;
+      }
+    }
+
+    h2 {
+      a {
+        color: black;
+      }
+    } 
+  }
+
+  .biz.row {
+    .biz {
+      a {
+        text-decoration: none;
+        font-size: medium;
       }
     }
   }

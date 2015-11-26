@@ -17,3 +17,6 @@
 
 # Ignore the database.yml file
 config/database.yml
+
+# Ignore the secrets.yml file
+config/secrets.yml
